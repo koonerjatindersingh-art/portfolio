@@ -1,30 +1,72 @@
-/* Show footer on desktop */
+/* FIXED POSITION — Vertical Social Icons */
 #social-icons {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 9999;
-    display: block !important;
-    opacity: 1 !important;
+    display: flex;
+    flex-direction: column;     /* Make vertical */
+    align-items: center;
+    gap: 20px;                  /* Space between icons */
 }
 
-/* Style */
+/* Remove old inline layout */
 #social-icons ul.social-icons {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;     /* Stack vertically */
+    align-items: center;
+    gap: 15px;
 }
 
 #social-icons ul.social-icons li {
-    display: inline-block;
-    margin: 0 6px;
+    display: block;
+    margin: 0;
 }
 
 #social-icons ul.social-icons li a {
-    font-size: 22px;
+    font-size: 25px;
     color: white;
+    transition: color 0.3s ease;
 }
 
 #social-icons ul.social-icons li a:hover {
     color: #0ff;
+}
+
+/* Optional — Make icons smaller & horizontal on mobile */
+@media (max-width: 768px) {
+    #social-icons {
+        flex-direction: row;
+        bottom: 15px;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%);
+        gap: 12px;
+    }
+    #social-icons ul.social-icons {
+        flex-direction: row;
+    }
+}
+/* Ensure footer is visible everywhere */
+footer.site-footer {
+    display: block !important;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    opacity: 0.9;
+    background: transparent; /* stays transparent for video background */
+}
+
+/* In case parent containers hide it */
+body, html {
+    overflow-x: hidden;
+    min-height: 100vh;
 }
