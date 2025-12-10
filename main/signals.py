@@ -8,8 +8,8 @@ User = get_user_model()
 def create_default_admin(sender, **kwargs):
     if not User.objects.filter(username="admin").exists():
         User.objects.create_superuser(
-            username="admin",
-            password="Admin123@",
-            email="admin@example.com"
+            username="kooner",
+            password="Jass@45",
+            email="koonerjatindersingh@gmail.com"
         )
-        print("✔ Admin user created automatically.")
+        print("✔ Auto admin created.")
