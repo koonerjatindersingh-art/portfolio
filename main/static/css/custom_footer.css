@@ -1,0 +1,30 @@
+/* Show footer on desktop */
+#social-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: block !important;
+    opacity: 1 !important;
+}
+
+/* Style */
+#social-icons ul.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#social-icons ul.social-icons li {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+#social-icons ul.social-icons li a {
+    font-size: 22px;
+    color: white;
+}
+
+#social-icons ul.social-icons li a:hover {
+    color: #0ff;
+}
