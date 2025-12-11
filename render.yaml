@@ -3,7 +3,7 @@ services:
     name: portfolio
     env: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn web.wsgi:application"
+    startCommand:  "gunicorn main.wsgi:application"
     plan: free
     autoDeploy: true
     envVars:
@@ -11,3 +11,4 @@ services:
         generateValue: true
       - key: DEBUG
         value: false
+
